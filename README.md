@@ -36,6 +36,9 @@ Final Model is choosed was the Scenario 1 where we achieved Miou as **0.421** an
 ### Description:
 Analyzing the shot information of different movies and predict whether a shot is a scene boundary or not. Prediction has been tried on 3 different scenario and the final and selected scenario is in Final folder. In all the scenarios we have used window implementation because information of before and after shot are crucial in deciding the scene boundary. We will see in this repository the different ways of usage of this information effectively.
 
+#### Splitting the dataset:
+We divided the dataset into train and test set of 80% and 20% respectively consisting of 54 and 12 movies respectively. Validatio split 20% which is divided at runtime of the model.
+
 #### Chanllenges:
  - Needed huge computation power in normal machine so shifted to Google colab and used TPU and High Ram.
  - Class Imbalance, to mitigate this issue we used Binary Focal Loss as loss function.
