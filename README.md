@@ -2,7 +2,7 @@
 Predicting the scene segmentation for each movie given features for each shot.
 
 ## Author: Srikaran Elakurthy
-Requirements:
+**Requirements:**
 - Python
 - Pytorch
 - Tensorflow
@@ -17,10 +17,15 @@ Requirements:
 Final Model is choosed was the Scenario 1 where we achieved Miou as **0.421** and with a decent Recall but recall was good for Scenario 3 but making Miou as main metric choosed Scenario1 as final model.
 **Metric*:**
 "AP": 0.27538717329839113,
+
 "mAP": 0.30240989906638455,
+
 "Miou": 0.42189183857398244,
+
 "Precision": 0.2486060100297133,
+
 "Recall": 0.581917462249597,
+
 "F1": 0.338406696537817
 
 ### What can be done more:
@@ -31,10 +36,10 @@ Final Model is choosed was the Scenario 1 where we achieved Miou as **0.421** an
 ### Description:
 Analyzing the shot information of different movies and predict whether a shot is a scene boundary or not. Prediction has been tried on 3 different scenario and the final and selected scenario is in Final folder. In all the scenarios we have used window implementation because information of before and after shot are crucial in deciding the scene boundary. We will see in this repository the different ways of usage of this information effectively.
 
-### Chanllenges:
+#### Chanllenges:
  - Needed huge computation power in normal machine so shifted to Google colab and used TPU and High Ram.
  - Class Imbalance, to mitigate this issue we used Binary Focal Loss as loss function.
- 
+#### Scenario Descriptions:
 Following Scenarios has been implemented 
 1. **Scenario 1:**
     - Choosen the even window size so that we can divide the window into half and make them as channels. So that we can capture the equal amount of relationships and differences from both sides of the shots. If we have shots {s<sub>1</sub>,s<sub>2</sub>,s<sub>3</sub>,....s<sub>n</sub>) and window size as 6 then for shot s<sub>i</sub> we will have first channel as (s<sub>i-2</sub>,s<sub>i-1</sub>,s<sub>i</sub>) and second channel as (s<sub>i+1</sub>,s<sub>i+2</sub>,s<sub>i+3</sub>).
