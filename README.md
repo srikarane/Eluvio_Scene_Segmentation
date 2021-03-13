@@ -10,6 +10,9 @@ Predicting the scene segmentation for each movie given features for each shot.
 - TPU
 - Google Colab or Jupyter Notebook
 
+**Raw Data Folder:**
+To work with the project, Raw data and splitted data(Train and test data are stored in: https://drive.google.com/drive/folders/1au8EnqzlpRw-8FPJli2a22yIcwHw-rqO?usp=sharing ) must be obtained from the link provided in their respective folders. More details are provided in every python file. 
+
 **Reason For choosing Google colab:**
 - Due to resource exhaustion in the machine, not able to flexibly perform transformations and build model, so choosed google colab to leverage the TPU resources. 
 
