@@ -4,7 +4,6 @@ Predicting the scene segmentation for each movie given features for each shot.
 ## Author: Srikaran Elakurthy
 **Requirements:**
 - Python
-- Pytorch
 - Tensorflow
 - Sckitlearn
 - TPU
